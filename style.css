@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(241, 248, 252);
+}
+
+/* container */
+#container {
+
+    margin: auto;
+    padding: 70px 0px;
+}
+
+/* .food, */
+#container,
+.foodContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+/* header */
+#header {
+    font-size: 40px;
+    border-bottom: 4px solid #c59d5f;
+    margin-bottom: 30px;
+    color: rgb(59, 59, 88);
+}
+
+/* buttons */
+.categories {
+    margin-bottom: 40px;
+}
+
+button {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 7px;
+    border-color: #c59d5f;
+    color: #c59d5f;
+    font-size: 17px;
+    outline: none;
+    margin: 0px 5px;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.all:hover,
+.lunch:hover,
+.dinner:hover {
+    color: white;
+    background-color: #c59d5f;
+    ;
+    transform: rotate(-20deg);
+}
+
+.breakfast:hover,
+.shakes:hover {
+    color: white;
+    background-color: #c59d5f;
+    ;
+    transform: rotate(20deg);
+}
+
+.food {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+
+
+}
+
+.foodContainer {
+    width: 85%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 30px;
+
+}
+
+/* hr */
+
+/* images */
+.food img {
+    height: 200px;
+
+   width: 100%;
+    border: 5px solid #c59d5f;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+/* title and price */
+.title,
+.price {
+    position: absolute;
+    top: 73%;
+    font-size: 20px;
+
+}
+
+.title {
+    color: rgb(59, 59, 88);
+    left: 0;
+    text-transform: capitalize;
+
+}
+
+.price {
+    right: 0;
+    color: #c59d5f;
+
+}
+
+.description {
+    margin-top: 40px;
+    font-size: 17px;
+    color: rgb(59, 59, 88);
+}
+
+@media(min-width: 768px) {
+
+    .foodContainer {
+        width: 90%;
+    }
+
+    /* img  */
+    .food img {
+        align-self: flex-start;
+    width: 45%;;
+       
+    }
+
+    .title,
+    .price {
+        top: 0;
+    }
+
+    .title {
+        left: 47%;
+    }
+
+    .description {
+        position: absolute;
+        width: 50%;
+        left: 47%;
+    }
+}
+
+@media(min-width: 1200px) {
+    .food {
+        grid-template-columns: 1fr 1fr;
+    }
+}
